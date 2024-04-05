@@ -1,0 +1,76 @@
+
+------------------------------------------------------------------------------------------
+
+Contraseña encriptado: Born2beRoot123
+Contraseña meguzqui: Malskdjfhg1
+Contraseña root: Malskdjfhg2
+
+------------------------------------------------------------------------------------------
+
+Algunos de los principales comandos:
+
+- Comprobar Interfaz gráfica: ls /usr/bin/*session
+
+- Comprobar UFW en uso : sudo ufw status	 sudo service ufw status
+
+- Comprobar SSH en uso : sudo service ssh status
+
+- Comprobar sistema Debian en uso : uname -v
+
+- Comprobar usuario en grupos sudo y user42 : getent group sudo		getent group user42
+
+- Crear usuario : sudo adduser ejemplo
+
+- Crear grupo evaluating : sudo addgroup evaluating
+
+- Añadir usuario a evaluating : sudo useradd ejemplo evaluating
+
+- Verificar usuarios grupo evaluating : getent group evaluating
+
+- Verificar hostname : hostname
+
+- Modificar hostname : sudo nano /etc/hostname y remplazamos
+	sudo nano /etc/hosts y remplazamos
+	sudo reboot para reiniciar la máquina y que surja efecto el cambio
+
+- Verificar particiones : lsblk
+
+- Verificar sudo instalado : which sudo		dpkg -s sudo
+
+- Añadir nuevo usuario a sudo : sudo adduser ejemplo sudo
+	getent group sudo
+
+- Mostrar reglas sudo : cat /etc/sudoers.d/sudo_config
+
+- Mostrar archivo sudo_config con el log : su root
+	cd /var/log/sudo 
+	cat sudo_config
+
+- Listar reglas ufw : sudo ufw status numbered
+
+- Crear regla al puerto 8080 : sudo ufw allow 8080
+	sudo ufw status numbered
+
+- Borrar la regla : sudo ufw delete ~numero~
+
+- Comprobar ssh : which ssh
+	sudo service ssh status
+
+- Conectar ssh : (en terminal del anfitrion) ssh nombre@localhost -p 4242
+	(probar con root) ssh root@localhost -p 4242
+	(en maquina virtual) sudo service ssh status
+
+- Modificar cron de 10 a 1 minuto : sudo crontab -u root -e 
+	(cambiar el tiempo de 10 a 1)
+
+- Detener cron : sudo /etc/init.d/cron stop
+
+- Activar cron : sudo /etc/init.d/cron start
+
+- Entrar a mi pagina de wp : (en anfitrion) barra de url de chrome = localhost
+	localhost/wp-admin (para centro de control de wordpress)
+
+- Entrar a lite speed : (en anfitrión) Barra de url de chrome = localhot:7080
+	localhost:8088
+
+- Obtener firma maquina virtual : (en carpeta de la maquina) shasum nombremaquina.vdi
